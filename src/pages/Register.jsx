@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 import Navbar from "../components/Navbar/Navbar";
 import { Container, Row, Col, Input, Button } from "mdbreact";
 import Footer from "../components/Footer/Footer";
-class Login extends Component {
+
+class Register extends Component {
   render() {
     return (
       <div>
@@ -13,18 +14,16 @@ class Login extends Component {
             <section class=" section-image my-5">
               <div class="modal-dialog cascading-modal" role="document">
                 <div class="modal-content">
-                  <div class="modal-header indigo darken-3 white-text">
+                  <div class="modal-header amber darken-3 white-text">
                     <h4 class="title">
-                    <i class="fa fa-unlock-alt" aria-hidden="true"></i> Login
+                      <i class="fa fa-unlock-alt" aria-hidden="true" /> Register
                     </h4>
                     <button
                       type="button"
                       class="close waves-effect waves-light"
                       data-dismiss="modal"
                       aria-label="Close"
-                    >
-                     
-                    </button>
+                    />
                   </div>
                   <div class="modal-body mb-0">
                     <form
@@ -89,6 +88,24 @@ class Login extends Component {
                         </div>
                       </div>
 
+                      <div class="md-form form-sm">
+                        <i class="fa fa-exclamation-triangle prefix" />
+                        <input
+                          type="text"
+                          id="contact-subject"
+                          name="subject"
+                          class="form-control"
+                          required=""
+                        />
+                        <label for="contact-subject" class="">
+                         Confirm  Password
+                        </label>
+                        <div class="valid-feedback">Checked!</div>
+                        <div class="invalid-feedback">
+                        passwords don,t match!
+                        </div>
+                      </div>
+
                       <div class="text-center mt-1-half">
                         <button
                           class="btn btn-amber mb-2 waves-effect waves-light"
@@ -96,11 +113,18 @@ class Login extends Component {
                           name="submitted"
                           type="submit"
                         >
-                         Login
+                          Login
                         </button>
-
-                        <p className="font-small grey-text mt-3">Forgot <a href="#" className="dark-grey-text ml-1 font-weight-bold"> Password?</a></p>
-                        <p className="font-small grey-text mt-3">Don't have an account? <a href="/Register" className="dark-grey-text ml-1 font-weight-bold"> Register</a></p>
+                        <p className="font-small grey-text mt-3">
+                          Already have an account?{" "}
+                          <a
+                            href="#"
+                            className="dark-grey-text ml-1 font-weight-bold"
+                          >
+                            {" "}
+                            Sign in
+                          </a>
+                        </p>
                       </div>
                     </form>
                   </div>
@@ -115,4 +139,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Register;

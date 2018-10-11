@@ -5,8 +5,9 @@ import './App.css';
 
 import Home from './pages/Home.jsx';
 import Features  from './pages/Features.jsx';
-import TvShows  from './pages/Login.jsx';
+import Login  from './pages/Login.jsx';
 import ContactUs  from './pages/ContactUs.jsx';
+import Register  from './pages/Register.jsx';
 
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
         <Route exact path="/" component={ Home } />
         <Route exact path="/Features" component={ Features } />
         <Route exact path="/ContactUs" component={ ContactUs } />
-        <Route exact path="/Login" component={ TvShows } />
+        <Route exact path="/Login" component={ Login} />
+        <Route exact path="/Register" component={ Register} />
         </div>
         </Router>
     );
